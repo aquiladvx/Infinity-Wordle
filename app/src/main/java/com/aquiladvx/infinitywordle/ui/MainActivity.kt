@@ -1,5 +1,6 @@
 package com.aquiladvx.infinitywordle.ui
 
+import android.content.Intent
 import android.os.Bundle
 import com.aquiladvx.infinitywordle.core.base.BaseActivity
 import com.aquiladvx.infinitywordle.databinding.ActivityMainBinding
@@ -21,14 +22,17 @@ class MainActivity: BaseActivity() {
         setContentView(view)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onResume() {
+        super.onResume()
 
-        setupUI()
+        startGame()
     }
 
-    private fun setupUI() {
-
+    private fun startGame() {
+        val intent = Intent(this, GameActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
     }
+
 
 }

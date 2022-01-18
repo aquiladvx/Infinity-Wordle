@@ -6,27 +6,27 @@
     android:padding="10dp">
 
     <include
-        android:id="@+id/word_1"
+        android:id="@+id/attempt_1"
         layout="@layout/word" />
 
     <include
-        android:id="@+id/word_2"
+        android:id="@+id/attempt_2"
         layout="@layout/word" />
 
     <include
-        android:id="@+id/word_3"
+        android:id="@+id/attempt_3"
         layout="@layout/word" />
 
     <include
-        android:id="@+id/word_4"
+        android:id="@+id/attempt_4"
         layout="@layout/word" />
 
     <include
-        android:id="@+id/word_5"
+        android:id="@+id/attempt_5"
         layout="@layout/word" />
 
     <include
-        android:id="@+id/word_6"
+        android:id="@+id/attempt_6"
         layout="@layout/word" />
 
 

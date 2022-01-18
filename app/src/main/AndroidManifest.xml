@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aquiladvx.infinitywordle">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +24,7 @@
         </activity>
 
         <activity android:name=".ui.MainActivity" android:theme="@style/Theme.InfinityWordle"/>
+        <activity android:name=".ui.GameActivity" android:theme="@style/Theme.InfinityWordle"/>
 
         <meta-data
             android:name="preloaded_fonts"
