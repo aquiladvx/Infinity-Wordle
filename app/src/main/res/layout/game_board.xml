@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <include
+        android:id="@+id/word_1"
+        layout="@layout/word" />
+
+    <include
+        android:id="@+id/word_2"
+        layout="@layout/word" />
+
+    <include
+        android:id="@+id/word_3"
+        layout="@layout/word" />
+
+    <include
+        android:id="@+id/word_4"
+        layout="@layout/word" />
+
+    <include
+        android:id="@+id/word_5"
+        layout="@layout/word" />
+
+    <include
+        android:id="@+id/word_6"
+        layout="@layout/word" />
+
+
+</LinearLayout>

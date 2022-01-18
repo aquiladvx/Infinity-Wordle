@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/row_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/q"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/w"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Q"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/w"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/q">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="W"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/e"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/r"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/w">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="E"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/r"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/t"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/e">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="R"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/t"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/y"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/r">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/y"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/u"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/t">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Y"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/u"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/i"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/y">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="U"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/i"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/o"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/u">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="I"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/o"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/p"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/i">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="O"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/p"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/o">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="P"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/a"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/s"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/s"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/d"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/a"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/d"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/f"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/s"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="D"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/f"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/g"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/d"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/g"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/h"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/f"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="G"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/h"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/j"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/g"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="H"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/j"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/k"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/h"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="J"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/k"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/l"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/j"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="K"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/l"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/del"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/k"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="L"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/del"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/l"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:src="@drawable/outline_backspace_white_24dp"
+                android:text="\uE007"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row_bottom"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/z"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/x"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Z"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/x"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/c"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/z"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="X"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/c"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/v"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/x"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/v"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/b"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/c"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="V"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/b"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/n"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/n"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/m"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/b"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="N"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/m"
+            android:layout_width="@dimen/key_width"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toStartOf="@+id/enter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/n"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="M"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/key_height"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:background="@drawable/letter_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/m"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="ENTER"
+                android:textColor="@color/letter_color"
+                android:textSize="@dimen/keyboard_fontsize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

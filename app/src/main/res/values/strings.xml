@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Infinity Wordle</string>
+    <string name="delete"><![CDATA[<-]]></string>
+</resources>

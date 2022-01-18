@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="key_height">@dimen/_30sdp</dimen>
+    <dimen name="key_width">@dimen/_25sdp</dimen>
+    <dimen name="keyboard_fontsize">@dimen/_15ssp</dimen>
+</resources>

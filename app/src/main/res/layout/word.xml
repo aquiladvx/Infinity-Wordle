@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/tv_letter_1"
+        layout="@layout/letter"/>
+    <include
+        android:id="@+id/tv_letter_2"
+        layout="@layout/letter"/>
+    <include
+        android:id="@+id/tv_letter_3"
+        layout="@layout/letter"/>
+    <include
+        android:id="@+id/tv_letter_4"
+        layout="@layout/letter"/>
+    <include
+        android:id="@+id/tv_letter_5"
+        layout="@layout/letter"/>
+
+</LinearLayout>
