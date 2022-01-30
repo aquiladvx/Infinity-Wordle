@@ -3,6 +3,8 @@ package com.aquiladvx.infinitywordle.ui
 import android.content.Context
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import com.aquiladvx.infinitywordle.R
 import com.aquiladvx.infinitywordle.databinding.ActivityGameBinding
 import com.aquiladvx.infinitywordle.databinding.WordBinding
 
@@ -15,7 +17,7 @@ import com.aquiladvx.infinitywordle.databinding.WordBinding
  */
 class BoardHelper(val context: Context, val binding: ActivityGameBinding) {
 
-    private lateinit var attemptRow: List<Pair<TextView, ConstraintLayout>>
+    lateinit var attemptRow: List<Pair<TextView, ConstraintLayout>>
     var userWord = ""
 
     private fun setRow(row: WordBinding) {
@@ -56,6 +58,20 @@ class BoardHelper(val context: Context, val binding: ActivityGameBinding) {
             }
 
         }
+    }
+
+    fun resetBoard() {
+        userWord = ""
+        for (row in 1..6) {
+            setupAttempt(row)
+            for (index in attemptRow.indices) {
+                attemptRow[index].first.text = ""
+                attemptRow[index].second.background = ContextCompat.getDrawable(context, R.drawable.letter_background_default)
+
+
+            }
+        }
+        setupAttempt(1)
     }
 
     private fun clearRow() {

@@ -10,6 +10,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="letter_wrong_place">#AFB42B</color>
+    <color name="letter_right_place">#00796B</color>
+
+    <color name="letter_wrong">#212122</color>
     <color name="gray_700">#3a3a3c</color>
     <color name="gray_500">#4B4B4E</color>
     <color name="gray_200">#818187</color>

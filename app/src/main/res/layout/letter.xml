@@ -6,7 +6,7 @@
     android:layout_height="50dp"
     android:layout_gravity="center"
     android:layout_margin="4dp"
-    android:background="@drawable/letter_background">
+    android:background="@drawable/letter_background_default">
 
     <TextView
         android:id="@+id/tv_letter"

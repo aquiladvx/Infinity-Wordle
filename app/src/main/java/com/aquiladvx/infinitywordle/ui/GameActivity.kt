@@ -1,10 +1,9 @@
 package com.aquiladvx.infinitywordle.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.aquiladvx.infinitywordle.R
@@ -15,7 +14,6 @@ import com.aquiladvx.infinitywordle.core.utils.removeAccents
 import com.aquiladvx.infinitywordle.data.Resource
 import com.aquiladvx.infinitywordle.data.repository.GameRepository
 import com.aquiladvx.infinitywordle.databinding.ActivityGameBinding
-import com.aquiladvx.infinitywordle.databinding.WordBinding
 import com.aquiladvx.infinitywordle.ui.viewmodel.GameViewModel
 import java.util.*
 
@@ -50,7 +48,7 @@ class GameActivity : BaseActivity(), View.OnClickListener {
 
         setObservers()
         setupUI()
-        getNewWord()
+        startNewGame()
     }
 
 
@@ -65,7 +63,6 @@ class GameActivity : BaseActivity(), View.OnClickListener {
             }
             is Resource.Success -> {
                 hideLoading()
-                startNewGame()
             }
             is Resource.DataError -> {
                 hideLoading()
@@ -74,7 +71,10 @@ class GameActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun startNewGame() {
-
+        keyboardHelper.resetKeyboard()
+        boardHelper.resetBoard()
+        attempt = 1
+        getNewWord()
     }
 
     private fun setupUI() {
@@ -130,8 +130,9 @@ class GameActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun getCurrentWord(): String? {
-       return viewModel.selectedWord.value?.data
+        return viewModel.selectedWord.value?.data
     }
+
     private fun makeGuess() {
         val userWord = boardHelper.userWord
         if (userWord.length == 5) {
@@ -140,17 +141,21 @@ class GameActivity : BaseActivity(), View.OnClickListener {
                 if (userWord.lowercase(Locale.getDefault()) == getCurrentWord()?.removeAccents()) {
                     //TODO SUCESSO
                     paintLetters()
+                    Toast.makeText(this, "sucesso", Toast.LENGTH_SHORT).show()
+                    startNewGame()
                 } else {
                     //TODO FAILURE
                     paintLetters()
                     boardHelper.userWord = ""
                     attempt++
                     boardHelper.setupAttempt(attempt)
-
                 }
             } else {
+
                 //TODO GAMEOVER
                 paintLetters()
+                Toast.makeText(this, "a palavra era ${getCurrentWord()}", Toast.LENGTH_SHORT).show()
+                startNewGame()
             }
 
 
@@ -160,7 +165,41 @@ class GameActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun paintLetters() {
+        val attemptRow = boardHelper.attemptRow
+        for (indice in attemptRow.indices) {
+            val letter = attemptRow[indice].first.text.toString()
+            val background = attemptRow[indice].second
+            val currentWord = getCurrentWord()
+            currentWord?.let {
+                if (it.contains(letter.lowercase(Locale.getDefault())) && letter.lowercase(Locale.getDefault()) != it[indice].toString()) {
+                    //LETRA NA POSICAO ERRADA
+                    background.background =
+                        ContextCompat.getDrawable(this, R.drawable.letter_background_wrong_place)
+                    keyboardHelper.paintKeyboard(
+                        R.drawable.letter_background_wrong_place,
+                        letter
+                    )
+                } else if (letter.lowercase(Locale.getDefault()) == it[indice].toString()
+                ) {
+                    background.background =
+                        ContextCompat.getDrawable(this, R.drawable.letter_background_right_place)
+                    keyboardHelper.paintKeyboard(
+                        R.drawable.letter_background_right_place,
+                        letter
+                    )
 
+                } else {
+                    background.background =
+                        ContextCompat.getDrawable(this, R.drawable.letter_background_wrong_letter)
+                    keyboardHelper.paintKeyboard(
+                        R.drawable.letter_background_wrong_letter,
+                        letter
+                    )
+
+                }
+            }
+
+        }
     }
 
 

@@ -50,20 +50,24 @@ class KeyboardHelper(val context: Context) {
 
     }
 
-    private fun resetKeyboard() {
+    fun resetKeyboard() {
         keyboard.forEach {
-            it.background = ContextCompat.getDrawable(context, R.drawable.letter_background)
+            it.background = ContextCompat.getDrawable(context, R.drawable.letter_background_default)
         }
     }
 
-    private fun paintKeyboard(keyboard: List<ConstraintLayout>, color: Int, letter: String) {
+    fun paintKeyboard(background: Int, letter: String) {
         val keyboardKey = keyboard.find { it.getNamedId() == letter }
-        keyboardKey?.setBackgroundColor(
-            ContextCompat.getColor(
+        keyboardKey?.background =
+            ContextCompat.getDrawable(
                 context,
-                color
+                background
             )
-        )
+
+    }
+
+    private fun paintLetters() {
+
     }
 
 }
